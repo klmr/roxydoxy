@@ -1,16 +1,15 @@
-Package: roxygen2
-Title: In-Line Documentation for R
-Description: Generate your Rd documentation, 'NAMESPACE' file, and collation 
-    field using specially formatted comments. Writing documentation in-line
-    with code makes it easier to keep your documentation up-to-date as your
-    requirements change. 'Roxygen2' is inspired by the 'Doxygen' system for C++.
-Version: 6.0.0.9000
+Package: roxydoxy
+Title: Documentation for non-package R code
+Description: A Roxygen compatible documentation system that allows parsing
+    documentation of individual R source files.
+Version: 0.0.1
 License: GPL (>= 2)
 Authors@R: c(
     person("Hadley", "Wickham",, "hadley@rstudio.com", c("aut", "cre", "cph")),
     person("Peter", "Danenberg",, "pcd@roxygen.org", c("aut", "cph")),
     person("Manuel", "Eugster", role = c("aut", "cph")),
-    person("RStudio", role = "cph")
+    person("RStudio", role = "cph"),
+    person("Konrad", "Rudolph", , "konrad.rudolph@gmail.com", c("aut", "cph"))
     )
 Depends:
     R (>= 3.0.2)
@@ -36,5 +35,5 @@ VignetteBuilder: knitr
 LinkingTo: Rcpp
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.0
-URL: https://github.com/klutometis/roxygen
-BugReports: https://github.com/klutometis/roxygen/issues
+URL: https://github.com/klmr/roxydoxy
+BugReports: https://github.com/klmr/roxydoxy/issues
