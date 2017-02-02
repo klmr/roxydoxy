@@ -6,8 +6,8 @@
 #' typically necessary if you're using S4 or RC classes (because super classes
 #' must be defined before subclasses).
 #'
-#' If there are no `@include` tags, roxygen2 will leave collate as is.
-#' This makes it easier to use roxygen2 with an existing collate directive,
+#' If there are no `@include` tags, roxydoxy will leave collate as is.
+#' This makes it easier to use roxydoxy with an existing collate directive,
 #' but if you remove all your `@include` tags, you'll need to also
 #' manually delete the collate field.
 #'

@@ -10,7 +10,7 @@ ns_tags <- c('export', 'exportClass', 'exportMethod', 'exportPattern',
 #'
 #' @family roclets
 #' @export
-#' @seealso `vignette("namespace", package = "roxygen2")`
+#' @seealso `vignette("namespace", package = "roxydoxy")`
 #' @aliases export exportClass exportMethod S3method import importFrom
 #'   importClassesFrom importMethodsFrom rawNamespace useDynLib
 namespace_roclet <- function() {
@@ -58,7 +58,7 @@ roclet_output.roclet_namespace <- function(x, results, base_path, ...) {
   NAMESPACE <- file.path(base_path, "NAMESPACE")
   results <- c(made_by("#"), results)
 
-  # Always check for roxygen2 header before overwriting NAMESPACE (#436),
+  # Always check for roxydoxy header before overwriting NAMESPACE (#436),
   # even when running for the first time
   write_if_different(NAMESPACE, results, check = TRUE)
 
@@ -116,7 +116,7 @@ ns_useDynLib         <- function(tag, block) {
 
   if (any(grepl(",", tag))) {
     # If there's a comma in list, don't quote output. This makes it possible
-    # for roxygen2 to support other NAMESPACE forms not otherwise mapped
+    # for roxydoxy to support other NAMESPACE forms not otherwise mapped
     args <- paste0(tag, collapse = " ")
     paste0("useDynLib(", args, ")")
   } else {
@@ -140,7 +140,7 @@ repeat_first <- function(name, x) {
 fun_args <- function(name, x) {
   if (any(grepl(",", x))) {
     # If there's a comma in list, don't quote output. This makes it possible
-    # for roxygen2 to support other NAMESPACE forms not otherwise mapped
+    # for roxydoxy to support other NAMESPACE forms not otherwise mapped
     args <- paste0(x, collapse = ", ")
   } else {
     args <- paste0(quote_if_needed(x), collapse = ",")

@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // findEndOfTag
 int findEndOfTag(std::string string, bool is_code);
-RcppExport SEXP roxygen2_findEndOfTag(SEXP stringSEXP, SEXP is_codeSEXP) {
+RcppExport SEXP roxydoxy_findEndOfTag(SEXP stringSEXP, SEXP is_codeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -19,7 +19,7 @@ END_RCPP
 }
 // rdComplete
 bool rdComplete(std::string string, bool is_code);
-RcppExport SEXP roxygen2_rdComplete(SEXP stringSEXP, SEXP is_codeSEXP) {
+RcppExport SEXP roxydoxy_rdComplete(SEXP stringSEXP, SEXP is_codeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -31,7 +31,7 @@ END_RCPP
 }
 // leadingSpaces
 IntegerVector leadingSpaces(CharacterVector lines);
-RcppExport SEXP roxygen2_leadingSpaces(SEXP linesSEXP) {
+RcppExport SEXP roxydoxy_leadingSpaces(SEXP linesSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -42,7 +42,7 @@ END_RCPP
 }
 // tokenise_block
 List tokenise_block(CharacterVector lines, std::string file, int offset);
-RcppExport SEXP roxygen2_tokenise_block(SEXP linesSEXP, SEXP fileSEXP, SEXP offsetSEXP) {
+RcppExport SEXP roxydoxy_tokenise_block(SEXP linesSEXP, SEXP fileSEXP, SEXP offsetSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -55,7 +55,7 @@ END_RCPP
 }
 // find_includes
 CharacterVector find_includes(std::string path);
-RcppExport SEXP roxygen2_find_includes(SEXP pathSEXP) {
+RcppExport SEXP roxydoxy_find_includes(SEXP pathSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -66,7 +66,7 @@ END_RCPP
 }
 // splitByWhitespace
 std::vector<std::string> splitByWhitespace(std::string string);
-RcppExport SEXP roxygen2_splitByWhitespace(SEXP stringSEXP) {
+RcppExport SEXP roxydoxy_splitByWhitespace(SEXP stringSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -77,7 +77,7 @@ END_RCPP
 }
 // wrapString
 std::string wrapString(std::string string, int width, int indent);
-RcppExport SEXP roxygen2_wrapString(SEXP stringSEXP, SEXP widthSEXP, SEXP indentSEXP) {
+RcppExport SEXP roxydoxy_wrapString(SEXP stringSEXP, SEXP widthSEXP, SEXP indentSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;

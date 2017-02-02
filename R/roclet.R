@@ -42,7 +42,7 @@ roclet_clean <- function(x, base_path) {
 #'
 #' This provides a flexible way of specifying a roclet in a string.
 #'
-#' @param x Arbitrary R code evaluated in roxygen2 package.
+#' @param x Arbitrary R code evaluated in roxydoxy package.
 #' @export
 #' @examples
 #' # rd, namespace, and vignette work for backward compatibility
@@ -53,13 +53,13 @@ roclet_clean <- function(x, base_path) {
 #' roclet_find("rd_roclet")
 #'
 #' # If it lives in another package, you'll need to use ::
-#' roclet_find("roxygen2::rd_roclet")
+#' roclet_find("roxydoxy::rd_roclet")
 #'
 #' # If it takes parameters (which no roclet does currently), you'll need
 #' # to call the function
-#' roclet_find("roxygen2::rd_roclet()")
+#' roclet_find("roxydoxy::rd_roclet()")
 roclet_find <- function(x) {
-  env <- new.env(parent = getNamespace("roxygen2"))
+  env <- new.env(parent = getNamespace("roxydoxy"))
   env$rd <- rd_roclet
   env$namespace <- namespace_roclet
   env$vignette <- vignette_roclet

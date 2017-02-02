@@ -6,7 +6,7 @@
 #' [namespace_roclet()], and for [update_collate()],
 #' for more details.
 #'
-#' Note that roxygen2 is a dynamic documentation system: it works using
+#' Note that roxydoxy is a dynamic documentation system: it works using
 #' by inspecting loaded objects in the package. This means that you must
 #' be able to load the package in order to document it.
 #' [source_package()] provides a simple simulation of package
@@ -35,7 +35,7 @@ roxygenize <- function(package.dir = ".",
 
   is_first <- first_time(package.dir)
   if (is_first) {
-    message("First time using roxygen2. Upgrading automatically...")
+    message("First time using roxydoxy. Upgrading automatically...")
   }
 
   base_path <- normalizePath(package.dir)

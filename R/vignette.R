@@ -5,7 +5,7 @@
 #' the output pdf or html. (This means it will automatically re-build the
 #' vignette if you change the vignette source, but _not_ when you
 #' change the R code). If you want finer control, add a Makefile to
-#' `vignettes/` and roxygen2 will use that instead.
+#' `vignettes/` and roxydoxy will use that instead.
 #'
 #' To prevent RStudio from re-building the vignettes again when checking
 #' your package, add `--no-build-vignettes` to the "Build Source Package"

@@ -7,7 +7,7 @@ NULL
 #' document that functions in your package.
 #'
 #' @family roclets
-#' @seealso `vignette("rd", package = "roxygen2")`
+#' @seealso `vignette("rd", package = "roxydoxy")`
 #' @export
 rd_roclet <- function() {
   roclet("rd")
@@ -132,7 +132,7 @@ roclet_output.roclet_rd <- function(x, results, base_path, ..., is_first = FALSE
   contents <- vapply(results, format, wrap = FALSE, FUN.VALUE = character(1))
   paths <- file.path(man, names(results))
 
-  # Always check for roxygen2 header before overwriting NAMESPACE (#436),
+  # Always check for roxydoxy header before overwriting NAMESPACE (#436),
   # even when running for the first time
   mapply(write_if_different, paths, contents, MoreArgs = list(check = TRUE))
 
